@@ -1,0 +1,31 @@
+public void max(){    
+        int max=head.data;
+        Node temp=head;
+        while (temp != null){
+            if (max<temp.data) {
+            max=temp.data;}
+            temp=temp.next;
+}
+    System.out.println("MAX IN LIST:"+max);
+}
+public void min(){    
+        int min=head.data;
+        Node temp=head;
+        while (temp != null){
+            if (min>temp.data) {
+            min=temp.data;}
+            temp=temp.next;
+}
+    System.out.println("Min IN LIST:"+min);
+}
+public void search(){
+        Node temp=head;
+        int a=10;
+        while(temp!=null){
+        if(temp.data==a){
+        System.out.print("The element found");
+        break;
+                }        else
+        System.out.println("Not found");
+        }
+}
