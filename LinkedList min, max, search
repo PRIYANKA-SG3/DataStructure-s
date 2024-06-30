@@ -8,6 +8,11 @@ public void max(){
 }
     System.out.println("MAX IN LIST:"+max);
 }
+
+
+
+
+
 public void min(){    
         int min=head.data;
         Node temp=head;
@@ -18,6 +23,11 @@ public void min(){
 }
     System.out.println("Min IN LIST:"+min);
 }
+
+
+
+
+
 public void search(){
         Node temp=head;
         int a=10;
@@ -28,4 +38,34 @@ public void search(){
                 }        else
         System.out.println("Not found");
         }
+}
+
+
+
+
+
+public void sort()
+{
+if(head=null || head.next==null)
+return
+else
+{
+Node cur=head;
+Node index=null;
+int temp;
+while(cur!=null)
+{
+index=curr.next;
+while(index!=null)
+{
+if(curr.data>index.data)
+{
+temp=curr.data;
+curr.data=index.data;
+index.data=temp;
+}
+index=index.data;
+}
+current=current.next;
+}
 }
