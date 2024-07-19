@@ -20,6 +20,38 @@ class abi
     head=null;
     tail=null;
   }
+    void sort()
+  {
+    Node temp1;
+    Node temp2;
+    int data;
+    for(temp1=head;temp1!=null;temp1=temp1.next)
+    {
+      for(temp2=temp1.next;temp2!=null;temp2=temp2.next)
+      {
+        data=temp1.data;
+        temp1.data=temp2.data;
+        temp2.data=data;
+    }
+  }
+}
+void dup()
+{
+  if(head==null)
+  return;
+  Node temp1=head;
+  Node temp2=temp1.next;
+  while(temp1!=null)
+  {
+    if(temp1.data==temp2.data)
+    {
+      temp1.next=temp2.next;
+      temp2.next.prev=temp1;
+    }
+    temp1=temp1.next;
+    temp2=temp2.next;
+  }
+}
   public void insert(int val)
   {
     Node newnode=new Node(val);
